@@ -18,7 +18,7 @@
     ?>
     </h2>
     <?php
-    echo file_get_contents("data/$id");?>
+    echo file_get_contents("../data/$id");?>
 
 
 </body>
