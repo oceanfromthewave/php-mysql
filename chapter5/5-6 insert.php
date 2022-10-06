@@ -1,12 +1,15 @@
 <?php
-    $mysqli = mysqli_connect("localhost", "root", "koreait", "tutorials");
-    //var dump($mysqli);
-    $res = mysqli_query($mysqli, "SHOW TABLES");
-    //var dump($res);
-    if(!$res) {
-        echo mysqli_error($mysqli);
-    }
+mysqli_connect("localhost","root","koreait","tutorials");
 
-    $row = mysqli_fetch_row($res);
-    var_dump($row); 
+$conn = mysqli_connect("localhost","root","koreait","tutorials");
+mysqli_query($conn,"
+INSERT INTO topic(
+    title,
+    description,
+    created
+    ) VALUES(
+        'MySQL',
+        'MySQL is ....',
+        NOW()
+        )");
 ?>
